@@ -1,0 +1,263 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+        border: none;
+        margin-left: 110px;
+        width: 750px;
+    }
+
+    th,
+    td {
+        text-align: left;
+        padding: 10px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f1f1f1;
+    }
+
+    .table-label {
+        font-weight: bold;
+    }
+
+    .header {
+        padding-top: 20px;
+        position: relative;
+        left: 120px;
+    }
+
+    .check {
+        position: relative;
+        left: 115px;
+        font-size: large;
+    }
+
+    #id {
+        position: relative;
+        left: 150px;
+        padding: 5px;
+        width: 535px;
+    }
+
+    #string {
+        position: relative;
+        left: 115px;
+        padding: 5px;
+        width: 535px;
+    }
+
+    #integer {
+        position: relative;
+        left: 105px;
+        padding: 5px;
+        width: 535px;
+    }
+
+    #float {
+        position: relative;
+        left: 132px;
+        padding: 5px;
+        width: 353px;
+    }
+
+    #startdate {
+        position: relative;
+        left: 130px;
+        padding: 5px;
+    }
+
+    .enddate {
+        position: relative;
+        left: 200px;
+        padding: 5px;
+    }
+
+    #boolean {
+        position: relative;
+        left: 98px;
+        padding: 5px;
+        width: 535px;
+    }
+
+    .botton-search {
+        position: relative;
+        left: 107px;
+        top: 10px;
+        background-color: rgb(54, 169, 235);
+        border: none;
+        color: white;
+        padding: 8px 8px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .button-edit {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 6px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .button-delete {
+        background-color: rgb(192, 69, 69);
+        border: none;
+        color: white;
+        padding: 6px 4px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .button-add {
+        position: relative;
+        left: 120px;
+        top: 10px;
+        background-color: rgb(54, 169, 235);
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    u1 {
+        list-style: none;
+        position: relative;
+        left: 100px;
+        padding: 0;
+        overflow: hidden;
+        border-color: none;
+    }
+
+    qi {
+        float: left;
+    }
+
+    qi a {
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        color: rgb(54, 169, 235);
+        border-color: blue;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid black;
+        border-top-left-radius: 1px solid black;
+    }
+</style>
+<link re1="stylesheet" href="../public/style.css">
+
+<body>
+    <div class="header">
+        <h1>BREAD (Browser, Read, Edit, Add, Delete)</h1>
+        <h2>Filters</h2>
+    </div>
+    <form action="/" method="GET">
+        <div class="check">
+            <input type="checkbox" name="check1">
+            <label>ID</label>
+            <input type="integer" name="id" placeholder="ID" id="id" />
+        </div>
+        <br />
+        <div class="check">
+            <input type="checkbox" name="check2">
+            <label>String</label>
+            <input type="text" name="string" placeholder="string" id="string" />
+        </div>
+        <br />
+        <div class="check">
+            <input type="checkbox" name="check3">
+            <label>integer</label>
+            <input type="integer" name="integer" placeholder="integer" id="integer" />
+        </div>
+        <br />
+        <div class="check">
+            <input type="checkbox" name="check4">
+            <label>float</label>
+            <input type="float" name="float" placeholder="float" id="float" />
+        </div>
+        <br />
+        <div class="check">
+            <input type="checkbox" name="check5">
+            <label>Date</label>
+            <input type="text" name="startdate" placeholder="start Date" id="startdate" />
+            <div class="enddate">
+                to
+                <br />
+                <input type="text" name="enddate" placeholder="end date" id="enddate" style="padding: 5px;" />
+            </div>
+        </div>
+        <br />
+        <div class="check">
+            <input type="checkbox" name="check6" />
+            <label>boolean</label>
+            <select name="boolean" id="boolean"> 
+                <option disabled selected>choose the boolean...</option>
+                <option value="true">true</option>
+                <option value="false">false</option>
+            </select>
+            <br />
+        </div>
+        <botton class="botton-search" type="submint">search</botton>
+        <br />
+    </form>
+    <br />
+    <table border="1">
+     <tr class="table-label">
+        <td>ID</td>
+        <td>String</td>
+        <td>Integer</td>
+        <td>Float</td>
+        <td>Date</td>
+        <td>Boolean</td>
+        <td>Actions</td>
+        </tr>
+        <% data.forEach((item, list) => { %>
+        <tr>
+            <td><%=item.id %></td>
+            <td><%=item.string %></td>
+            <td><%=item.integer %></td>
+            <td><%=item.float %></td>
+            <td><%=item.date %></td>
+            <td><%=item.boolean %></td>
+            <td>
+                <a href="/edit/<%= list %>">
+                    <button class="button-edit">Edit</button></a>
+                <a href="/delete/<%= list %>">
+                    <button class="button-delete">Delete</button></a>
+                <% }) %>
+            </td>
+        </tr>
+    </table>
+    <a href="add"><button class="button-add">Add</button></a>
+</body>
+
+</html>

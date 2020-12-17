@@ -1,0 +1,23 @@
+[
+   {
+      "id": 3,
+      "string": "coba lagi",
+      "integer": "99",
+      "float": "100,405",
+      "date": "20 november 2017"
+   },
+   {
+      "id": 3,
+      "string": "super sekali",
+      "integer": "0",
+      "float": "1.45",
+      "date": "kosong"
+   },
+   {
+      "id": 3,
+      "string": "testing data",
+      "integer": "12",
+      "float": "1,45",
+      "date": "12 desember 2017"
+   }
+]

@@ -1,0 +1,114 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<style>
+    .header {
+        padding-top: 20px;
+        position: relative;
+        left: 120px;
+    }
+
+    .input-name {
+        position: relative;
+        left: 115px;
+        font-size: large;
+    }
+
+    #string {
+        position: relative;
+        left: 230px;
+        width: 535px;
+        padding: 5px;
+    }
+
+    #integer {
+        position: relative;
+        left: 217px;
+        width: 535px;
+        padding: 5px;
+    }
+
+    #float {
+        position: relative;
+        left: 240px;
+        padding: 5px;
+        width: 535px;
+    }
+
+    #date {
+        position: relative;
+        left: 240;
+        padding: 5px;
+        width: 535px;
+    }
+
+    #boolean {
+        position: relative;
+        left: 208px;
+        padding: 5px;
+        width: 535px;
+    }
+
+    #bottom-save {
+        position: relative;
+        left: 115px;
+        top: 10px;
+        background-color: rgb(54, 169, 235);
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <h1>add Data</h1>
+    </div>
+    <form action="/add" method="post">
+        <label class="input-name" for="">string</label>
+        <input id="string" type="text" name="string"
+ placeholder="string" required />
+        <br />
+        <br />
+        <label class="input-name" for="">integer</label>
+        <input id="integer" type="text" name="integer"
+ placeholder="integer" required />
+        <br />
+        <br />
+        <label class="input-name" for="">float</label>
+        <input id="float" type="float" name="float"
+ placeholder="float" required />
+        <br />
+        <br />
+        <label class="input-name" for="">date</label>
+        <input id="date" type="text" name="date"
+ placeholder="date" required />
+        <br />
+        <br />
+        <label class="input-name" for="">boolean</label>
+        <select mane="boolean" id="boolean" >
+        <option disabled selected>choose the bolean...</option>
+        <option value="true">true</option>
+        <option value="false">false</option>
+    </select>
+    <br />
+    <br />
+    <button id="bottom-save" type="submit">save</button>
+    <br />
+    </form>
+</body>
+
+</html>

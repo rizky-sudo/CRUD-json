@@ -1,0 +1,119 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<style>
+    .header {
+        padding-top: 20px;
+        position: relative;
+        left: 120px;
+    }
+
+    .inpu-name {
+        position: relative;
+        font-size: large;
+        left: 0px;
+    }
+
+    #id {
+        position: relative;
+        left: 140px;
+        width: 353px;
+        padding: 5px;
+    }
+
+    #string {
+        position: relative;
+        left: 111px;
+        width: 353px;
+        padding: 5px;
+    }
+
+    #integer {
+        position: relative;
+        left: 98px;
+        width: 353px;
+        padding: 5px;
+    }
+
+    #float {
+        position: relative;
+        left: 121;
+        width: 353px;
+        padding: 5px;
+    }
+
+    #date {
+        position: relative;
+        left: 120px;
+        width: 353px;
+        padding: 5px;
+    }
+
+    #boolean {
+        position: relative;
+        left: 90px;
+        width: 353px;
+        padding: 5px;
+    }
+
+    .bottom-edit {
+        position: relative;
+        left: 0px;
+        top: 10px;
+        background-color: rgb(94, 115, 233);
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <h1>Edit data</h1>
+        <form action="" method="post">
+            <label class="input-name" for="">ID</label>
+            <input id="id" type="integer" name="ID" value="<%= item.id %>" disabled />
+            <br />
+            <br />
+            <label class="input-name" for="">string</label>
+            <input id="string" type="text" name="string" value="<%= item.string %>" required />
+            <br />
+            <br />
+            <label class="input-name" for="">integer</label>
+            <input id="integer" type="number" name="integer" value="<% item.integer %>" required />
+            <br />
+            <br />
+            <label class="input-name" for="">float</label>
+            <input id="float" type="float" name="float" value="<% item.float %>" required />
+            <br />
+            <br />
+            <label class="input-name" for="">date</label>
+            <input id="date" type="text" name="date" value="<% item.date %>" required />
+            <br />
+            <br />
+            <label class="input-name" for="">boolean</label>
+            <select name="boolean" id="boolean" />
+            <!-- <option> >choose the boolean...<option/> -->
+            <option value="true" <%= item.boolean == "true" ? ' selected' : '';%>>true</option>
+            <option value="false" <%= item.boolean == "false" ? ' selected' : '';%>>false</option>
+            </select>
+            <br />
+            <br />
+            <button class="button-edit" type="submit">Update</button>
+            <br />
+        </form>
+</body>
+
